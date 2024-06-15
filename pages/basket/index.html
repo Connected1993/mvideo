@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/basket.css" />
+    <title>Корзина</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/basket.css">
-  <title>Корзина</title>
-</head>
+  <body>
+    <header id="site-header">
+      <div class="container">
+        <h1>
+          корзина<span>[</span> <em><a href="/index.html">На главную</a></em>
+          <span class="last-span is-open">]</span>
+        </h1>
+      </div>
+    </header>
 
-<body>
-  <header id="site-header">
-    <div class="container">
-      <h1>корзина<span>[</span> <em><a href="/index.html" >На главную</a></em> <span
-          class="last-span is-open">]</span></h1>
-    </div>
-  </header>
+    <div class="container"></div>
 
-  <div class="container">
+    <footer id="site-footer">
+      <div class="container clearfix">
+        <div class="left">
+          <h2 class="subtotal">Количество товаров: <span>1</span>шт</h2>
+          <h3 class="tax">Скидка (10%): <span>15.000</span>р</h3>
+          <h3 class="shipping">Сумма: <span>150.000</span>р</h3>
+        </div>
 
-    <section id="cart">
+        <div class="right">
+          <h1 class="total">Общая сумма: <span>135.000</span>р</h1>
+          <a class="btn">Оформить</a>
+        </div>
+      </div>
+    </footer>
+
+    <template id="item">
       <article class="product">
         <header>
           <a class="remove">
-            <img src="/src/phones/1.jpg" alt="">
+            <img src="/src/phones/1.jpg" alt="" />
 
             <h3>удалить товар</h3>
           </a>
         </header>
-
         <div class="content">
-
           <h1>Iphone1</h1>
-
-          описание
-
-          <div title="You have selected this product to be shipped in the color yellow." style="top: 0"
-            class="color yellow"></div>
+          <span>описание</span>
+          <div
+            title="You have selected this product to be shipped in the color yellow."
+            style="top: 0"
+            class="color yellow"
+          ></div>
           <div style="top: 43px" class="type small"></div>
         </div>
-
         <footer class="content">
           <span class="qt-minus">-</span>
           <span class="qt">1</span>
           <span class="qt-plus">+</span>
 
-          <h2 class="full-price">
-            135.000р
-          </h2>
+          <h2 class="full-price">135.000р</h2>
 
-          <h2 class="price">
-            150.000р
-          </h2>
+          <h2 class="price">150.000р</h2>
         </footer>
       </article>
-    </section>
+    </template>
 
-  </div>
-
-  <footer id="site-footer">
-    <div class="container clearfix">
-
-      <div class="left">
-        <h2 class="subtotal">Количество товаров: <span>1</span>шт</h2>
-        <h3 class="tax">Скидка (10%): <span>15.000</span>р</h3>
-        <h3 class="shipping">Сумма: <span>150.000</span>р</h3>
-      </div>
-
-      <div class="right">
-        <h1 class="total">Общая сумма: <span>135.000</span>р</h1>
-        <a class="btn">Оформить</a>
-      </div>
-
-    </div>
-  </footer>
-</body>
-
+    <script src="/js/storage.js"></script>
+    <script>
+      // при загрузке страницы получаем хранилище
+      window.onload = ()=>{
+        let products = getStorageProduct();
+          if ( products ){
+            for (let id in products ){
+                console.log(products[id]);
+            }
+          }
+      }
+    </script>
+  </body>
 </html>

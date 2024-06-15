@@ -2,8 +2,8 @@ let  Products = [
     {
         id: 1,
         img:'./src/phones/1.jpg',
-        price1: 135000,
-        price2: 150000,
+        price: 135000,
+        discount: 4,
         productname: "Iphone1",
         articul: "b135"
     },
@@ -113,7 +113,7 @@ let  Products = [
     },
     {
         id: 15,
-        img:'./src/phones/15.jpg',
+        img:'15.jpg',
         price1: 51623,
         price2: 235711,
         productname: "Iphone15",
@@ -177,7 +177,7 @@ let  Products = [
     },
     {
         id: 23,
-        img:'./src/phones/23.jpg',
+        img:'23.jpg',
         price1: 92865,
         price2: 263592,
         productname: "Iphone23",
