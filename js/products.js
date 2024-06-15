@@ -340,10 +340,11 @@ Products.forEach(product=>{
 
     // замена контента 
     card.querySelector('.card__title').textContent = product.productname;
-    card.querySelector('a').href = '/pages/index.html?id='+product.id;
+    card.querySelector('.card__image').href = '/pages/card/index.html?id='+product.id;
+    card.querySelector('.card__title').href = '/pages/card/index.html?id='+product.id;
     card.querySelector('img').src = product.img;
-    card.querySelector('.card__price--common').textContent = product.price;
-    card.querySelector('.card__price--discount').textContent = product.discount;
+    card.querySelector('.card__price--common').textContent = product.price1;
+    card.querySelector('.card__price--discount').textContent = product.price2;
 
     // положили id товара в атрибут data-id у кнопки
     card.querySelector('.card__add').dataset.id = product.id;
