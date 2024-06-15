@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/slider.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="slider">
+        <div class="slider__line d-flex">
+            <img src="/src/photo/1.jpg">
+            <img src="/src/photo/2.jpg">
+            <img src="/src/photo/3.jpg">
+            <img src="/src/photo/4.jpg">
+            <img src="/src/photo/5.jpg">
+            
+        </div>
+        <div class="slider__controls d-flex">
+            <i class="fa-solid fa-circle-arrow-left" onclick="sliderLeft()"></i>
+            <i class="fa-solid fa-circle-arrow-right" onclick="sliderRight()"></i>
+            
+        </div>
+        <div class="slider__dotteds">      
+            <!-- <div class="slider__dotted sm__dotted active"></div> -->
+        </div>
+    </div>
+<div class="buc">
+    <a href="/pages/basket/1.html"><img src="/src/photo/buc.png" alt=""></a>
+  </div>
+  </div>
+  <div class="cards"></div>
+  
+    <template id="card">
+      <div class="card">
+        <!-- Верхняя часть -->
+        <div class="card__top">
+          <!-- Изображение-ссылка товара -->
+          <a href="/pages/Card/index.html" class="card__image">
+            <img
+              src="/src/phones/1.jpg"
+              alt="Apple IPhone ."
+            />
+          </a>
+          <!-- Скидка на товар -->
+          <div class="card__label">-10%</div>
+        </div>
+        <!-- Нижняя часть -->
+        <div class="card__bottom">
+          <!-- Цены на товар (с учетом скидки и без)-->
+          <div class="card__prices">
+            <div class="card__price card__price--discount">135 000</div>
+            <div class="card__price card__price--common">150 000</div>
+          </div>
+          <!-- Ссылка-название товара -->
+          <a href="/pages/Card/index.html" class="card__title">
+            IPhone1 
+          </a>
+          <!-- Кнопка добавить в корзину -->
+          <button class="card__add" onclick="addProduct(this)">В корзину</button>
+        </div>
+    </div>
+    </template>  
+  
+    <script defer src="/js/events.js" type="module"></script>
+    <script defer src="/js/slider.js" type="module"></script>
+    <script defer src="/js/swap.js" type="module"></script>
+    <script type="module">
+        // импортируем в глобальную область видимости
+        import {counter,sliderLeft,sliderRight,showSlide} from './js/slider.js';
+        window.sliderLeft = sliderLeft;
+        window.sliderRight = sliderRight;
+        window.showSlide = showSlide;
+    </script>
+    <script src="/js/products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        //  function getProductId(id) {
+        //     if (!id) return null;
+        //     const response =  axios.get(`http://localhost:3000/products/` + id);
+        //     return await response.data.id;
+        // }
+    </script>
+</body>
+</html>
