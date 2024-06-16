@@ -17,7 +17,9 @@
       </div>
     </header>
 
-      <div class="container"></div></div>
+    <main>
+      <div class="container"></div>
+    </main>
 
     <footer id="site-footer">
       <div class="container clearfix">
@@ -39,13 +41,12 @@
         <header>
           <a class="remove">
             <img src="/src/phones/1.jpg" alt="" / />
-
             <h3>удалить товар</h3>
           </a>
         </header>
         <div class="content">
-          <h1>Iphone1</h1>
-          <span>описание</span>
+          <h1 class="name">Iphone1</h1>
+          <span class="description">описание</span>
           <div
             title="You have selected this product to be shipped in the color yellow."
             style="top: 0"
@@ -57,9 +58,7 @@
           <span class="qt-minus">-</span>
           <span class="qt">1</span>
           <span class="qt-plus">+</span>
-
           <h2 class="full-price">135.000р</h2>
-
           <h2 class="price">150.000р</h2>
         </footer>
       </article>
@@ -71,10 +70,48 @@
       window.onload = ()=>{
         let products = getStorageProduct();
           if ( products ){
+            let ids = '';
             for (let id in products ){
-                console.log('id='+id+'кол='+products[id]);
-            }
+              // склеиваем строку
+                ids += `id=${id}&`;
+            } // цикл завершился
+            
+            // отправляем get запрос на сервер
+            fetch(`http://localhost:3001/products?${ids}`)
+            // pending - ожидание
+            // fulfilled - выполнено - then
+            // rejected - отклонено - catch
+            // finnaly - срабатывает всегда не зависимо от статуса ответа сервера
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(products){
+                console.log(products);
+                // отрисовать товары в корзине
+                renderCart(products);
+            })
           }
+      }
+
+      function renderCart(products){
+        // находим шаблон и клонируем
+        const parent = document.querySelector('main .container');
+
+        products.forEach(product=>{
+          let clone = document.getElementById('item').content.querySelector('article').cloneNode(true);
+
+          clone.querySelector('.name').textContent = product.name;
+          //clone.querySelector('qt').textContent = product.name;
+          clone.querySelector('.full-price').textContent = product.price;
+          clone.querySelector('.price').textContent = 'цена по скидке '+getDiscountPrice(product);
+          clone.querySelector('.remove img').src = `/src/phones/${product.img}`;
+          parent.appendChild(clone);
+        });
+
+      }
+
+      function getDiscountPrice(product){
+        return Math.ceil(product.price - (product.price / 100) * product.discount);
       }
     </script>
   </body>

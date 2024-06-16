@@ -3,9 +3,9 @@
         {
             "id": 1,
             "img":"1.jpg",
-            "price": 135000,
+            "price": 150000,
             "discount": 10,
-            "productname": "Iphone1",
+            "name": "Iphone1",
             "articul": "b135"
         },
         {
@@ -13,7 +13,7 @@
             "img":"2.png",
             "price": 125000,
             "discount": 5,
-            "productname": "Iphone2",
+            "name": "Iphone2",
             "articul": "b136"
         },
         {
@@ -21,7 +21,7 @@
             "img":"3.jpg",
             "price": 105000,
             "discount": 3,
-            "productname": "Iphone3",
+            "name": "Iphone3",
             "articul": "b137"
         },
         {
@@ -29,7 +29,7 @@
             "img":"4.jpg",
             "price": 125000,
             "discount":7,
-            "productname": "Iphone4",
+            "name": "Iphone4",
             "articul": "b138"
         },
         {
@@ -37,7 +37,7 @@
             "img":"5.jpg",
             "price": 15000,
             "discount": 15,
-            "productname": "Iphone5",
+            "name": "Iphone5",
             "articul": "b139"
         },
         {
@@ -45,7 +45,7 @@
             "img":"6.jpg",
             "price": 13000,
             "discount": 2,
-            "productname": "Iphone6",
+            "name": "Iphone6",
             "articul": "b140"
         },
         {
@@ -53,7 +53,7 @@
             "img":"7.jpg",
             "price": 12000,
             "discount":12,
-            "productname": "Iphone7",
+            "name": "Iphone7",
             "articul": "b141"
         },
         {
@@ -61,7 +61,7 @@
             "img":"8.png",
             "price": 16300,
             "discount": 20,
-            "productname": "Iphone8",
+            "name": "Iphone8",
             "articul": "b142"
         },
         {
@@ -69,7 +69,7 @@
             "img":"9.jpg",
             "price": 16000,
             "discount": 10,
-            "productname": "Iphone9",
+            "name": "Iphone9",
             "articul": "b143"
         },
         {
@@ -77,7 +77,7 @@
             "img":"10.jpg",
             "price": 163000,
             "discount": 13,
-            "productname": "Iphone10",
+            "name": "Iphone10",
             "articul": "b144"
         },
         {
@@ -85,7 +85,7 @@
             "img":"11.jpg",
             "price": 112000,
             "discount": 13,
-            "productname": "Iphone11",
+            "name": "Iphone11",
             "articul": "b145"
         },
         {
@@ -93,7 +93,7 @@
             "img":"12.jpg",
             "price": 1345000,
             "discount": 12,
-            "productname": "Iphone12",
+            "name": "Iphone12",
             "articul": "b146"
         },
         {
@@ -101,7 +101,7 @@
             "img":"13.jpg",
             "price": 123500,
             "discount": 11,
-            "productname": "Iphone13",
+            "name": "Iphone13",
             "articul": "b147"
         },
         {
@@ -109,7 +109,7 @@
             "img":"14.jpg",
             "price": 169840,
             "discount": 9,
-            "productname": "Iphone14",
+            "name": "Iphone14",
             "articul": "b148"
         },
         {
@@ -117,7 +117,7 @@
             "img":"15.jpg",
             "price": 51623,
             "discount": 14,
-            "productname": "Iphone15",
+            "name": "Iphone15",
             "articul": "b149"
         },
         {
@@ -125,7 +125,7 @@
             "img":"16.jpg",
             "price": 23521,
             "discount": 9,
-            "productname": "Iphone16",
+            "name": "Iphone16",
             "articul": "b150"
         },
         {
@@ -133,7 +133,7 @@
             "img":"17.jpg",
             "price": 81623,
             "discount": 13,
-            "productname": "Iphone17",
+            "name": "Iphone17",
             "articul": "b151"
         },
         {
@@ -141,7 +141,7 @@
             "img":"18.png",
             "price": 182569,
             "discount": 15,
-            "productname": "Iphone18",
+            "name": "Iphone18",
             "articul": "b152"
         },
         {
@@ -149,7 +149,7 @@
             "img":"19.jpg",
             "price": 928754,
             "discount": 10,
-            "productname": "Iphone19",
+            "name": "Iphone19",
             "articul": "b153"
         },
         {
@@ -157,7 +157,7 @@
             "img":"20.jpg",
             "price": 98263,
             "discount": 10,
-            "productname": "Iphone20",
+            "name": "Iphone20",
             "articul": "b154"
         },
         {
@@ -165,7 +165,7 @@
             "img":"21.jpg",
             "price": 98236,
             "discount": 12,
-            "productname": "Iphone21",
+            "name": "Iphone21",
             "articul": "b155"
         },
         {
@@ -173,7 +173,7 @@
             "img":"22.jpg",
             "price": 65675,
             "discount": 13,
-            "productname": "Iphone22",
+            "name": "Iphone22",
             "articul": "b156"
         },
         {
@@ -181,7 +181,7 @@
             "img":"23.jpg",
             "price": 92865,
             "discount": 14,
-            "productname": "Iphone23",
+            "name": "Iphone23",
             "articul": "b157"
         },
         {
@@ -189,7 +189,7 @@
             "img":"24.jpg",
             "price": 917654,
             "discount": 12,
-            "productname": "Iphone24",
+            "name": "Iphone24",
             "articul": "b158"
         },
         {
@@ -197,7 +197,7 @@
             "img":"25.jpg",
             "price": 182659,
             "discount": 16,
-            "productname": "Iphone25",
+            "name": "Iphone25",
             "articul": "b159"
         },
         {
@@ -205,7 +205,7 @@
             "img":"26.jpg",
             "price": 1245125,
             "discount": 25,
-            "productname": "Iphone26",
+            "name": "Iphone26",
             "articul": "b160"
         },
         {
@@ -213,7 +213,7 @@
             "img":"27.jpg",
             "price": 98632,
             "discount": 13,
-            "productname": "Iphone27",
+            "name": "Iphone27",
             "articul": "b161"
         },
         {
@@ -221,7 +221,7 @@
             "img":"28.jpg",
             "price": 91524,
             "discount": 8,
-            "productname": "Iphone28",
+            "name": "Iphone28",
             "articul": "b162"
         },
         {
@@ -229,7 +229,7 @@
             "img":"29.png",
             "price": 873543,
             "discount": 15,
-            "productname": "Iphone29",
+            "name": "Iphone29",
             "articul": "b163"
         },
         {
@@ -237,7 +237,7 @@
             "img":"30.png",
             "price": 81544,
             "discount": 18,
-            "productname": "Iphone30",
+            "name": "Iphone30",
             "articul": "b164"
         },
         {
@@ -245,7 +245,7 @@
             "img":"31.jpg",
             "price": 23426,
             "discount": 10,
-            "productname": "Iphone31",
+            "name": "Iphone31",
             "articul": "b165"
         },
         {
@@ -253,7 +253,7 @@
             "img":"32.jpg",
             "price": 232626,
             "discount": 11,
-            "productname": "Iphone32",
+            "name": "Iphone32",
             "articul": "b166"
         },
         {
@@ -261,7 +261,7 @@
             "img":"33.jpg",
             "price": 182754,
             "discount": 17,
-            "productname": "Iphone33",
+            "name": "Iphone33",
             "articul": "b167"
         },
         {
@@ -269,7 +269,7 @@
             "img":"34.jpg",
             "price": 283745,
             "discount": 19,
-            "productname": "Iphone34",
+            "name": "Iphone34",
             "articul": "b168"
         },
         {
@@ -277,7 +277,7 @@
             "img":"35.jpg",
             "price": 98273,
             "discount": 12,
-            "productname": "Iphone35",
+            "name": "Iphone35",
             "articul": "b169"
         },
         {
@@ -285,7 +285,7 @@
             "img":"36.jpg",
             "price": 2342355,
             "discount": 15,
-            "productname": "Iphone36",
+            "name": "Iphone36",
             "articul": "b170"
         },
         {
@@ -293,7 +293,7 @@
             "img":"37.jpg",
             "price": 92865,
             "discount": 14,
-            "productname": "Iphone37",
+            "name": "Iphone37",
             "articul": "b171"
         },
         {
@@ -301,7 +301,7 @@
             "img":"38.jpg",
             "price": 124156,
             "discount":12,
-            "productname": "Iphone38",
+            "name": "Iphone38",
             "articul": "b172"
         },
         {
@@ -309,7 +309,7 @@
             "img":"39.jpg",
             "price": 124512,
             "discount": 14,
-            "productname": "Iphone39",
+            "name": "Iphone39",
             "articul": "b173"
         },
         {
@@ -317,7 +317,7 @@
             "img":"40.jpg",
             "price": 827354,
             "discount": 13,
-            "productname": "Iphone40",
+            "name": "Iphone40",
             "articul": "b174"
         }
     ]
