@@ -28,8 +28,6 @@
     transform: translateX(0);
 } 
 .slider__line {
-   position: relative;
-   bottom: 170px;
     transition: transform 500ms;
     width:100%;
 }

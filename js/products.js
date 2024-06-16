@@ -1,321 +1,321 @@
 let  Products = [
     {
         id: 1,
-        img:'./src/phones/1.jpg',
-        price1: 135000,
-        price2: 150000,
+        img:'1.jpg',
+        price: 135000,
+        discount: "-10%",
         productname: "Iphone1",
         articul: "b135"
     },
     {
         id: 2,
-        img:'./src/phones/2.png',
-        price1: 125000,
-        price2: 160000,
+        img:'2.png',
+        price: 125000,
+        discount: "-5%",
         productname: "Iphone2",
         articul: "b136"
     },
     {
         id: 3,
-        img:'./src/phones/3.jpg',
-        price1: 105000,
-        price2: 110000,
+        img:'3.jpg',
+        price: 105000,
+        discount: "-3%",
         productname: "Iphone3",
         articul: "b137"
     },
     {
         id: 4,
-        img:'./src/phones/4.jpg',
-        price1: 125000,
-        price2: 130000,
+        img:'4.jpg',
+        price: 125000,
+        discount:"-7%",
         productname: "Iphone4",
         articul: "b138"
     },
     {
         id: 5,
-        img:'./src/phones/5.jpg',
-        price1: 15000,
-        price2: 250000,
+        img:'5.jpg',
+        price: 15000,
+        discount: "-15%",
         productname: "Iphone5",
         articul: "b139"
     },
     {
         id: 6,
-        img:'./src/phones/6.jpg',
-        price1: 13000,
-        price2: 230000,
+        img:'6.jpg',
+        price: 13000,
+        discount: "-2%",
         productname: "Iphone6",
         articul: "b140"
     },
     {
         id: 7,
-        img:'./src/phones/7.jpg',
-        price1: 12000,
-        price2: 220000,
+        img:'7.jpg',
+        price: 12000,
+        discount:"-12%",
         productname: "Iphone7",
         articul: "b141"
     },
     {
         id: 8,
-        img:'./src/phones/8.png',
-        price1: 16300,
-        price2: 210000,
+        img:'8.png',
+        price: 16300,
+        discount: "-20%",
         productname: "Iphone8",
         articul: "b142"
     },
     {
         id: 9,
-        img:'./src/phones/9.jpg',
-        price1: 16000,
-        price2: 220000,
+        img:'9.jpg',
+        price: 16000,
+        discount: "-10%",
         productname: "Iphone9",
         articul: "b143"
     },
     {
         id: 10,
-        img:'./src/phones/10.jpg',
-        price1: 163000,
-        price2: 190000,
+        img:'10.jpg',
+        price: 163000,
+        discount: "-13%",
         productname: "Iphone10",
         articul: "b144"
     },
     {
         id: 11,
-        img:'./src/phones/11.jpg',
-        price1: 112000,
-        price2: 127600,
+        img:'11.jpg',
+        price: 112000,
+        discount: "-13%",
         productname: "Iphone11",
         articul: "b145"
     },
     {
         id: 12,
-        img:'./src/phones/12.jpg',
-        price1: 1345000,
-        price2: 2230000,
+        img:'12.jpg',
+        price: 1345000,
+        discount: "-12%",
         productname: "Iphone12",
         articul: "b146"
     },
     {
         id: 13,
-        img:'./src/phones/13.jpg',
-        price1: 1235000,
-        price2: 2550000,
+        img:'13.jpg',
+        price: 123500,
+        discount: "-11%",
         productname: "Iphone13",
         articul: "b147"
     },
     {
         id: 14,
-        img:'./src/phones/14.jpg',
-        price1: 169840,
-        price2: 660000,
+        img:'14.jpg',
+        price: 169840,
+        discount: "-9%",
         productname: "Iphone14",
         articul: "b148"
     },
     {
         id: 15,
-        img:'./src/phones/15.jpg',
-        price1: 51623,
-        price2: 235711,
+        img:'15.jpg',
+        price: 51623,
+        discount: "-14%",
         productname: "Iphone15",
         articul: "b149"
     },
     {
         id: 16,
-        img:'./src/phones/16.jpg',
-        price1: 23521,
-        price2: 3479235,
+        img:'16.jpg',
+        price: 23521,
+        discount: "-9%",
         productname: "Iphone16",
         articul: "b150"
     },
     {
         id: 17,
-        img:'./src/phones/17.jpg',
-        price1: 81623,
-        price2: 192556,
+        img:'17.jpg',
+        price: 81623,
+        discount: "-13%",
         productname: "Iphone17",
         articul: "b151"
     },
     {
         id: 18,
-        img:'./src/phones/18.png',
-        price1: 182569,
-        price2: 9127545,
+        img:'18.png',
+        price: 182569,
+        discount: "-15%",
         productname: "Iphone18",
         articul: "b152"
     },
     {
         id: 19,
-        img:'./src/phones/19.jpg',
-        price1: 928754,
-        price2: 2983655,
+        img:'19.jpg',
+        price: 928754,
+        discount: "-10%",
         productname: "Iphone19",
         articul: "b153"
     },
     {
         id: 20,
-        img:'./src/phones/20.jpg',
-        price1: 98263,
-        price2: 528365,
+        img:'20.jpg',
+        price: 98263,
+        discount: "-10%",
         productname: "Iphone20",
         articul: "b154"
     },
     {
         id: 21,
-        img:'./src/phones/21.jpg',
-        price1: 98236,
-        price2: 9175442,
+        img:'21.jpg',
+        price: 98236,
+        discount: "-12%",
         productname: "Iphone21",
         articul: "b155"
     },
     {
         id: 22,
-        img:'./src/phones/22.jpg',
-        price1: 65675,
-        price2: 154942,
+        img:'22.jpg',
+        price: 65675,
+        discount: "-13%",
         productname: "Iphone22",
         articul: "b156"
     },
     {
         id: 23,
-        img:'./src/phones/23.jpg',
-        price1: 92865,
-        price2: 263592,
+        img:'23.jpg',
+        price: 92865,
+        discount: "-14%",
         productname: "Iphone23",
         articul: "b157"
     },
     {
         id: 24,
-        img:'./src/phones/24.jpg',
-        price1: 917654,
-        price2: 9182644,
+        img:'24.jpg',
+        price: 917654,
+        discount: "-12%",
         productname: "Iphone24",
         articul: "b158"
     },
     {
         id: 25,
-        img:'./src/phones/25.jpg',
-        price1: 182659,
-        price2: 9821544,
+        img:'25.jpg',
+        price: 182659,
+        discount: "-16%",
         productname: "Iphone25",
         articul: "b159"
     },
     {
         id: 26,
-        img:'./src/phones/26.jpg',
-        price1: 1245125,
-        price2: 12515623,
+        img:'26.jpg',
+        price: 1245125,
+        discount: "-25%",
         productname: "Iphone26",
         articul: "b160"
     },
     {
         id: 27,
-        img:'./src/phones/27.jpg',
-        price1: 98632,
-        price2: 927835,
+        img:'27.jpg',
+        price: 98632,
+        discount: "-13%",
         productname: "Iphone27",
         articul: "b161"
     },
     {
         id: 28,
-        img:'./src/phones/28.jpg',
-        price1: 91524,
-        price2: 197254,
+        img:'28.jpg',
+        price: 91524,
+        discount: "-8%",
         productname: "Iphone28",
         articul: "b162"
     },
     {
         id: 29,
-        img:'./src/phones/29.png',
-        price1: 873543,
-        price2: 9164124,
+        img:'29.png',
+        price: 873543,
+        discount: "-15%",
         productname: "Iphone29",
         articul: "b163"
     },
     {
         id: 30,
-        img:'./src/phones/30.png',
-        price1: 81544,
-        price2: 198690,
+        img:'30.png',
+        price: 81544,
+        discount: "-18%",
         productname: "Iphone30",
         articul: "b164"
     },
     {
         id: 31,
-        img:'./src/phones/31.jpg',
-        price1: 23426,
-        price2: 236215,
+        img:'31.jpg',
+        price: 23426,
+        discount: "-10%",
         productname: "Iphone31",
         articul: "b165"
     },
     {
         id: 32,
-        img:'./src/phones/32.jpg',
-        price1: 232626,
-        price2: 23623123,
+        img:'32.jpg',
+        price: 232626,
+        discount: "-11%",
         productname: "Iphone32",
         articul: "b166"
     },
     {
         id: 33,
-        img:'./src/phones/33.jpg',
-        price1: 182754,
-        price2: 1927544,
+        img:'33.jpg',
+        price: 182754,
+        discount: "-17%",
         productname: "Iphone33",
         articul: "b167"
     },
     {
         id: 34,
-        img:'./src/phones/34.jpg',
-        price1: 283745,
-        price2: 2837532,
+        img:'34.jpg',
+        price: 283745,
+        discount: "-19%",
         productname: "Iphone34",
         articul: "b168"
     },
     {
         id: 35,
-        img:'./src/phones/35.jpg',
-        price1: 98273,
-        price2: 238752,
+        img:'35.jpg',
+        price: 98273,
+        discount: "-12%",
         productname: "Iphone35",
         articul: "b169"
     },
     {
         id: 36,
-        img:'./src/phones/36.jpg',
-        price1: 2342355,
-        price2: 235216125,
+        img:'36.jpg',
+        price: 2342355,
+        discount: "-15%",
         productname: "Iphone36",
         articul: "b170"
     },
     {
         id: 37,
-        img:'./src/phones/37.jpg',
-        price1: 92865,
-        price2: 298735,
+        img:'37.jpg',
+        price: 92865,
+        discount: "-14%",
         productname: "Iphone37",
         articul: "b171"
     },
     {
         id: 38,
-        img:'./src/phones/38.jpg',
-        price1: 12415,
-        price2: 125433,
+        img:'38.jpg',
+        price: 124156,
+        discount:"-12%",
         productname: "Iphone38",
         articul: "b172"
     },
     {
         id: 39,
-        img:'./src/phones/39.jpg',
-        price1: 124512,
-        price2: 1255434,
+        img:'39.jpg',
+        price: 124512,
+        discount: "-14%",
         productname: "Iphone39",
         articul: "b173"
     },
     {
         id: 40,
-        img:'./src/phones/40.jpg',
-        price1: 827354,
-        price2: 2875102,
+        img:'40.jpg',
+        price: 827354,
+        discount: "-13%",
         productname: "Iphone40",
         articul: "b174"
     },
@@ -342,9 +342,9 @@ Products.forEach(product=>{
     card.querySelector('.card__title').textContent = product.productname;
     card.querySelector('.card__image').href = '/pages/card/index.html?id='+product.id;
     card.querySelector('.card__title').href = '/pages/card/index.html?id='+product.id;
-    card.querySelector('img').src = product.img;
-    card.querySelector('.card__price--common').textContent = product.price1;
-    card.querySelector('.card__price--discount').textContent = product.price2;
+    card.querySelector('img').src = `./src/phones/${product.img}`;
+    card.querySelector('.card__prices').textContent = product.price;
+    card.querySelector('.card__label').textContent = product.discount;
 
     // положили id товара в атрибут data-id у кнопки
     card.querySelector('.card__add').dataset.id = product.id;

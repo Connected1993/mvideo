@@ -85,7 +85,7 @@
       flex: 0 0 50%; /* Размещаем цены равномерно в две колонки */
     }
     
-    .card__price::after {
+    .card__prices::after {
       content: "₽";
       margin-left: 4px;
       position: relative;
@@ -156,17 +156,6 @@
       color: #fff;
     }
 
-    .basket{
-      color: #ff6633;
-      font-size: 32px;
-      border: #70c05b 5px solid;
-      width: 160px;
-      margin: 20px auto;
-      border-radius: 10px;
-
-    }
-  
-  
     h1{
       color: #ff6633;
     }
@@ -186,9 +175,3 @@
       height: 100px;
       width: 50%;
     }
-  .buc{
-   position: relative;
-   bottom: 300px;
-   left: 1450px;
-  }
-  
