@@ -1,81 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/basket.css" />
-    <title>Корзина</title>
-  </head>
 
-  <body>
-    <header id="site-header">
-      <div class="container">
-        <h1>
-          корзина<span>[</span> <em><a href="/index.html">На главную</a></em>
-          <span class="last-span is-open">]</span>
-        </h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/basket.css" />
+  <title>Корзина</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/slider.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <section class="begin">
+      <div class="Text">
+        M <span>VIDEO</span>
       </div>
-    </header>
-
-      <div class="container"></div></div>
-
-    <footer id="site-footer">
-      <div class="container clearfix">
-        <div class="left">
-          <h2 class="subtotal">Количество товаров: <span>1</span>шт</h2>
-          <h3 class="tax">Скидка (10%): <span>15.000</span>р</h3>
-          <h3 class="shipping">Сумма: <span>150.000</span>р</h3>
-        </div>
-
-        <div class="right">
-          <h1 class="total">Общая сумма: <span>135.000</span>р</h1>
-          <a class="btn">Оформить</a>
-        </div>
+      <div>
+        <a href="/index.html">ГЛАВНАЯ</a>
+        <a href="#">КОНТАКТЫ</a>
+        <a href="#">О КОМПАНИИ</a>
+        <a class="b" href="/pages/basket/index.html">КОРЗИНА</a>
       </div>
-    </footer>
+    </section>
 
-    <template id="item">
-      <article class="product">
-        <header>
-          <a class="remove">
-            <img src="/src/phones/1.jpg" alt="" / />
+  </header>
+  <main>
+    <div class="container"></div>
+  </main>
 
-            <h3>удалить товар</h3>
-          </a>
-        </header>
-        <div class="content">
-          <h1>Iphone1</h1>
-          <span>описание</span>
-          <div
-            title="You have selected this product to be shipped in the color yellow."
-            style="top: 0"
-            class="color yellow"
-          ></div>
-          <div style="top: 43px" class="type small"></div>
-        </div>
-        <footer class="content">
-          <span class="qt-minus">-</span>
-          <span class="qt">1</span>
-          <span class="qt-plus">+</span>
-
-          <h2 class="full-price">135.000р</h2>
-
-          <h2 class="price">150.000р</h2>
-        </footer>
-      </article>
-    </template>
-
-    <script src="/js/storage.js"></script>
-    <script>
-      // при загрузке страницы получаем хранилище
-      window.onload = ()=>{
-        let products = getStorageProduct();
-          if ( products ){
-            for (let id in products ){
-                console.log('id='+id+'кол='+products[id]);
-            }
-          }
-      }
-    </script>
+  <body class="site-footer">
+    <div class="container clearfix">
+      <div class="left">
+        <h2 class="subtotal">Количество товаров: <span>1</span>шт</h2>
+      </div>
+      <div class="right">
+        <h1 class="total">Общая сумма: <span></span>р</h1>
+        <a class="btn">Оформить</a>
+      </div>
+    </div>
   </body>
+  <section class="footer">
+    <div> <span>О НАС</span>
+      <p>Мы оказываем услуги по продаже техники и оказыванийй услуг <br>
+        компаниям и физическим лицам <br>
+        оптовым и частным лицам, которым <br>
+        нужна техника от смартфона до систем вентиляции <br>
+        по наличию,или для заказа обращайтесь в раздел контакты<br>
+
+      </p>
+    </div>
+
+    <div>
+      <script type="text/javascript" charset="utf-8" async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3d265f163aa5ee1f9a58a15404efb9b388346388caba49acd5d07ab90b297c9d&amp;width=320&amp;height=240&amp;lang=ru_RU&amp;scroll=true">
+        </script>
+    </div>
+
+    <div><span>КОНТАКТЫ</span>
+      <p>
+        <img src="/src/photo/placeholder.png" alt="">
+        Москва Большая Спаская 12 <br>
+        <img src="/src/photo/telephone.png" alt="">
+        8(495)495-55-65 <br>
+        <img src="/src/photo/mail.png" alt="">
+        mvideo@mail.ru
+      </p>
+    </div>
+  </section>
+  <div class="rig">
+    2007 Все права защищены.
+  </div>
+  </footer>
+
+  <template id="item">
+    <article class="product">
+      <header>
+        <a class="remove">
+          <img src="/src/phones/1.jpg" alt="" />
+          <h3>удалить товар</h3>
+        </a>
+      </header>
+      <div class="content">
+        <h1 class="name">Iphone1</h1>
+        <span class="description">описание</span>
+        <div title="You have selected this product to be shipped in the color yellow." style="top: 0"
+          class="color yellow"></div>
+        <div style="top: 43px" class="type small"></div>
+      </div>
+      <footer class="content">
+        <span class="qt-minus">-</span>
+        <span class="qt">1</span>
+        <span class="qt-plus">+</span>
+
+        <h2 class="full-price">135.000р</h2>
+        <h2 class="price">150.000р</h2>
+      </footer>
+    </article>
+  </template>
+
+  <script src="/js/storage.js"></script>
+  <script>
+    // при загрузке страницы получаем хранилище
+    window.onload = () => {
+      let products = getStorageProduct();
+      if (products) {
+        let ids = '';
+        for (let id in products) {
+          ids += `id=${id}&`;
+        }
+        fetch(`http://localhost:3001/products?${ids}`).then(function (response) {
+          return response.json()
+        })
+          .then(function (products) {
+            renderCart(products);
+            sum();
+          })
+      }
+      function renderCart(products) {
+        const parent = document.querySelector('main .container');
+        products.forEach(product => {
+          let clone = document.getElementById('item').content.querySelector('article').cloneNode(true);
+          clone.querySelector('.name').textContent = product.name;
+          //clone.querySelector('.qt').textContent = product.;
+          clone.querySelector('.full-price').textContent = product.price;
+          clone.querySelector('.price').textContent = 'Цена по скидке' + getDiscountPrice(product);
+          clone.querySelector('.remove img').src = `/src/phones/${product.img}`;
+          parent.appendChild(clone);
+        });
+      }
+
+      function sum() {
+
+      };
+    }
+    function getDiscountPrice(product) {
+      return Math.ceil(product.price - (product.price / 100) * product.discount);
+    };
+  </script>
+</body>
+
 </html>

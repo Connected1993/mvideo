@@ -1,28 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/basket.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="/css/slider.css">
     <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/card.css">
 </head>
+<header>
+    <section class="begin">
+        <div class="Text">
+            M <span>VIDEO</span>
+        </div>
+        <div>
+            <a href="/index.html">ГЛАВНАЯ</a>
+            <a href="#">КОНТАКТЫ</a>
+            <a href="#">О КОМПАНИИ</a>
+            <a class="b" href="/pages/basket/index.html">КОРЗИНА</a>
+        </div>
+    </section>
+
+</header>
+
 <body>
     <header>
-        <a href="/index.html">Назад</a>
-     <h1>СМАРТФОНЫ</h1> <br>
+
+        <h1>СМАРТФОН</h1> <br>
     </header>
-    <main>
-     <img src="/src/phones/1.jpg" alt="">
-     <p>
-        Iphone1 <br><br>
-        <span>Описание телефона!</span>
-     </p>
-     <div>Цена</div>
-     <a href="/pages/basket/index.html"><div class="basket"> В КОРЗИНУ</div></a>
+    <main class="top">
+
+        <img src="/src/phones/1.jpg">
+
+        <div class="text">
+            <p>
+            <h1>Iphone11</h1> <br><br>
+            <span>О товаре
+                О товаре
+                Данная модель могла быть предварительно активирована. Является абсолютно новой, не проходила процедуру
+                привязки аккаунта Apple ID.
+                Обращаем ваше внимание, указанная выше информация не влияет на потребительские характеристики,
+                функциональность и гарантию М.Видео.
+                <br><br>
+                iPhone 12. Во-первых, это быстро.
+                <br><br>
+                iPhone 12 поражает возможностями. Чип A14 Bionic. Передовая система двух камер. И великолепный дисплей
+                Super Retina XDR, на котором видно каждую деталь.
+                <br><br>
+                Характеристики
+                • Дисплей Super Retina XDR 6,1 дюйма
+                • Панель Ceramic Shield для повышенной прочности
+                • Чип A14 Bionic
+                • Передовая система двух камер 12 Мп: сверхширокоугольная и широкоугольная;
+                Ночной режим, технология Deep Fusion, Smart HDR 3, съёмка HDR‑видео 4K в стандарте Dolby Vision
+                • Фронтальная камера TrueDepth 12 Мп: Ночной режим, съёмка HDR‑видео 4K в стандарте Dolby Vision
+                • Надёжная защита от воды (IP68)
+                • Поддержка аксессуаров MagSafe: мгновенно примагничиваются и обеспечивают более быструю беспроводную
+                зарядку
+                • iOS 15 с новыми функциями, которые расширяют возможности iPhone</span>
+            </p>
+            <br><br>
+            <div>Цена39500₽</div>
+            <button class="card__add" onclick="addProduct(this)">В корзину</button>
+
+        </div>
+
+
+
+        </a>
     </main>
-    <footer>
-     <img src="/src/photo/1.jpg" alt="">
-    </footer>
+    <section class="footer">
+        <div> <span>О НАС</span>
+            <p>Мы оказываем услуги по продаже техники и оказыванийй услуг <br>
+                компаниям и физическим лицам <br>
+                оптовым и частным лицам, которым <br>
+                нужна техника от смартфона до систем вентиляции <br>
+                по наличию,или для заказа обращайтесь в раздел контакты<br>
+
+            </p>
+        </div>
+
+        <div>
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3d265f163aa5ee1f9a58a15404efb9b388346388caba49acd5d07ab90b297c9d&amp;width=320&amp;height=240&amp;lang=ru_RU&amp;scroll=true">
+                </script>
+        </div>
+
+        <div><span>КОНТАКТЫ</span>
+            <p>
+                <img src="/src/photo/placeholder.png" alt="">
+                Москва Большая Спаская 12 <br>
+                <img src="/src/photo/telephone.png" alt="">
+                8(495)495-55-65 <br>
+                <img src="/src/photo/mail.png" alt="">
+                mvideo@mail.ru
+            </p>
+        </div>
+    </section>
+    <div class="rig">
+        2007 Все права защищены.
+    </div>
 </body>
+<script defer src="/js/events.js" type="module"></script>
+<script defer src="/js/slider.js" type="module"></script>
+<script defer src="/js/swap.js" type="module"></script>
+<script type="module">
+    // импортируем в глобальную область видимости
+    import { counter, sliderLeft, sliderRight, showSlide } from './js/slider.js';
+    window.sliderLeft = sliderLeft;
+    window.sliderRight = sliderRight;
+    window.showSlide = showSlide;
+</script>
+<script src="/js/products.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    //  function getProductId(id) {
+    //     if (!id) return null;
+    //     const response =  axios.get(`http://localhost:3000/products/` + id);
+    //     return await response.data.id;
+    // }
+</script>
+
 </html>

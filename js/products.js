@@ -1,7 +1,7 @@
-let  Products = [
+let Products = [
     {
         id: 1,
-        img:'1.jpg',
+        img: '1.jpg',
         price: 135000,
         discount: "-10%",
         productname: "Iphone1",
@@ -9,7 +9,7 @@ let  Products = [
     },
     {
         id: 2,
-        img:'2.png',
+        img: '2.png',
         price: 125000,
         discount: "-5%",
         productname: "Iphone2",
@@ -17,7 +17,7 @@ let  Products = [
     },
     {
         id: 3,
-        img:'3.jpg',
+        img: '3.jpg',
         price: 105000,
         discount: "-3%",
         productname: "Iphone3",
@@ -25,15 +25,15 @@ let  Products = [
     },
     {
         id: 4,
-        img:'4.jpg',
+        img: '4.jpg',
         price: 125000,
-        discount:"-7%",
+        discount: "-7%",
         productname: "Iphone4",
         articul: "b138"
     },
     {
         id: 5,
-        img:'5.jpg',
+        img: '5.jpg',
         price: 15000,
         discount: "-15%",
         productname: "Iphone5",
@@ -41,7 +41,7 @@ let  Products = [
     },
     {
         id: 6,
-        img:'6.jpg',
+        img: '6.jpg',
         price: 13000,
         discount: "-2%",
         productname: "Iphone6",
@@ -49,15 +49,15 @@ let  Products = [
     },
     {
         id: 7,
-        img:'7.jpg',
+        img: '7.jpg',
         price: 12000,
-        discount:"-12%",
+        discount: "-12%",
         productname: "Iphone7",
         articul: "b141"
     },
     {
         id: 8,
-        img:'8.png',
+        img: '8.png',
         price: 16300,
         discount: "-20%",
         productname: "Iphone8",
@@ -65,7 +65,7 @@ let  Products = [
     },
     {
         id: 9,
-        img:'9.jpg',
+        img: '9.jpg',
         price: 16000,
         discount: "-10%",
         productname: "Iphone9",
@@ -73,7 +73,7 @@ let  Products = [
     },
     {
         id: 10,
-        img:'10.jpg',
+        img: '10.jpg',
         price: 163000,
         discount: "-13%",
         productname: "Iphone10",
@@ -81,7 +81,7 @@ let  Products = [
     },
     {
         id: 11,
-        img:'11.jpg',
+        img: '11.jpg',
         price: 112000,
         discount: "-13%",
         productname: "Iphone11",
@@ -89,7 +89,7 @@ let  Products = [
     },
     {
         id: 12,
-        img:'12.jpg',
+        img: '12.jpg',
         price: 1345000,
         discount: "-12%",
         productname: "Iphone12",
@@ -97,7 +97,7 @@ let  Products = [
     },
     {
         id: 13,
-        img:'13.jpg',
+        img: '13.jpg',
         price: 123500,
         discount: "-11%",
         productname: "Iphone13",
@@ -105,7 +105,7 @@ let  Products = [
     },
     {
         id: 14,
-        img:'14.jpg',
+        img: '14.jpg',
         price: 169840,
         discount: "-9%",
         productname: "Iphone14",
@@ -113,7 +113,7 @@ let  Products = [
     },
     {
         id: 15,
-        img:'15.jpg',
+        img: '15.jpg',
         price: 51623,
         discount: "-14%",
         productname: "Iphone15",
@@ -121,7 +121,7 @@ let  Products = [
     },
     {
         id: 16,
-        img:'16.jpg',
+        img: '16.jpg',
         price: 23521,
         discount: "-9%",
         productname: "Iphone16",
@@ -129,7 +129,7 @@ let  Products = [
     },
     {
         id: 17,
-        img:'17.jpg',
+        img: '17.jpg',
         price: 81623,
         discount: "-13%",
         productname: "Iphone17",
@@ -137,7 +137,7 @@ let  Products = [
     },
     {
         id: 18,
-        img:'18.png',
+        img: '18.png',
         price: 182569,
         discount: "-15%",
         productname: "Iphone18",
@@ -145,7 +145,7 @@ let  Products = [
     },
     {
         id: 19,
-        img:'19.jpg',
+        img: '19.jpg',
         price: 928754,
         discount: "-10%",
         productname: "Iphone19",
@@ -153,7 +153,7 @@ let  Products = [
     },
     {
         id: 20,
-        img:'20.jpg',
+        img: '20.jpg',
         price: 98263,
         discount: "-10%",
         productname: "Iphone20",
@@ -161,7 +161,7 @@ let  Products = [
     },
     {
         id: 21,
-        img:'21.jpg',
+        img: '21.jpg',
         price: 98236,
         discount: "-12%",
         productname: "Iphone21",
@@ -169,7 +169,7 @@ let  Products = [
     },
     {
         id: 22,
-        img:'22.jpg',
+        img: '22.jpg',
         price: 65675,
         discount: "-13%",
         productname: "Iphone22",
@@ -177,7 +177,7 @@ let  Products = [
     },
     {
         id: 23,
-        img:'23.jpg',
+        img: '23.jpg',
         price: 92865,
         discount: "-14%",
         productname: "Iphone23",
@@ -185,7 +185,7 @@ let  Products = [
     },
     {
         id: 24,
-        img:'24.jpg',
+        img: '24.jpg',
         price: 917654,
         discount: "-12%",
         productname: "Iphone24",
@@ -193,7 +193,7 @@ let  Products = [
     },
     {
         id: 25,
-        img:'25.jpg',
+        img: '25.jpg',
         price: 182659,
         discount: "-16%",
         productname: "Iphone25",
@@ -201,7 +201,7 @@ let  Products = [
     },
     {
         id: 26,
-        img:'26.jpg',
+        img: '26.jpg',
         price: 1245125,
         discount: "-25%",
         productname: "Iphone26",
@@ -209,7 +209,7 @@ let  Products = [
     },
     {
         id: 27,
-        img:'27.jpg',
+        img: '27.jpg',
         price: 98632,
         discount: "-13%",
         productname: "Iphone27",
@@ -217,7 +217,7 @@ let  Products = [
     },
     {
         id: 28,
-        img:'28.jpg',
+        img: '28.jpg',
         price: 91524,
         discount: "-8%",
         productname: "Iphone28",
@@ -225,7 +225,7 @@ let  Products = [
     },
     {
         id: 29,
-        img:'29.png',
+        img: '29.png',
         price: 873543,
         discount: "-15%",
         productname: "Iphone29",
@@ -233,7 +233,7 @@ let  Products = [
     },
     {
         id: 30,
-        img:'30.png',
+        img: '30.png',
         price: 81544,
         discount: "-18%",
         productname: "Iphone30",
@@ -241,7 +241,7 @@ let  Products = [
     },
     {
         id: 31,
-        img:'31.jpg',
+        img: '31.jpg',
         price: 23426,
         discount: "-10%",
         productname: "Iphone31",
@@ -249,7 +249,7 @@ let  Products = [
     },
     {
         id: 32,
-        img:'32.jpg',
+        img: '32.jpg',
         price: 232626,
         discount: "-11%",
         productname: "Iphone32",
@@ -257,7 +257,7 @@ let  Products = [
     },
     {
         id: 33,
-        img:'33.jpg',
+        img: '33.jpg',
         price: 182754,
         discount: "-17%",
         productname: "Iphone33",
@@ -265,7 +265,7 @@ let  Products = [
     },
     {
         id: 34,
-        img:'34.jpg',
+        img: '34.jpg',
         price: 283745,
         discount: "-19%",
         productname: "Iphone34",
@@ -273,7 +273,7 @@ let  Products = [
     },
     {
         id: 35,
-        img:'35.jpg',
+        img: '35.jpg',
         price: 98273,
         discount: "-12%",
         productname: "Iphone35",
@@ -281,7 +281,7 @@ let  Products = [
     },
     {
         id: 36,
-        img:'36.jpg',
+        img: '36.jpg',
         price: 2342355,
         discount: "-15%",
         productname: "Iphone36",
@@ -289,7 +289,7 @@ let  Products = [
     },
     {
         id: 37,
-        img:'37.jpg',
+        img: '37.jpg',
         price: 92865,
         discount: "-14%",
         productname: "Iphone37",
@@ -297,15 +297,15 @@ let  Products = [
     },
     {
         id: 38,
-        img:'38.jpg',
+        img: '38.jpg',
         price: 124156,
-        discount:"-12%",
+        discount: "-12%",
         productname: "Iphone38",
         articul: "b172"
     },
     {
         id: 39,
-        img:'39.jpg',
+        img: '39.jpg',
         price: 124512,
         discount: "-14%",
         productname: "Iphone39",
@@ -313,7 +313,7 @@ let  Products = [
     },
     {
         id: 40,
-        img:'40.jpg',
+        img: '40.jpg',
         price: 827354,
         discount: "-13%",
         productname: "Iphone40",
@@ -327,11 +327,11 @@ let  Products = [
 const template = document.querySelector('#card').content;
 // общий блок для карточек
 const cards = document.querySelector('.cards');
-Products.forEach(function(product,index){
-        
+Products.forEach(function (product, index) {
+
 });
 
-Products.forEach(product=>{
+Products.forEach(product => {
     let card = template.querySelector('.card').cloneNode(true);
 
     // устанавливаем id товара в атрибут data-id для карточки
@@ -340,8 +340,8 @@ Products.forEach(product=>{
 
     // замена контента 
     card.querySelector('.card__title').textContent = product.productname;
-    card.querySelector('.card__image').href = '/pages/card/index.html?id='+product.id;
-    card.querySelector('.card__title').href = '/pages/card/index.html?id='+product.id;
+    card.querySelector('.card__image').href = '/pages/card/index.html?id=' + product.id;
+    card.querySelector('.card__title').href = '/pages/card/index.html?id=' + product.id;
     card.querySelector('img').src = `./src/phones/${product.img}`;
     card.querySelector('.card__prices').textContent = product.price;
     card.querySelector('.card__label').textContent = product.discount;
@@ -349,28 +349,28 @@ Products.forEach(product=>{
     // положили id товара в атрибут data-id у кнопки
     card.querySelector('.card__add').dataset.id = product.id;
     // отрисовываем карточку в общий блок 
-    cards.insertAdjacentElement('beforeend',card);
+    cards.insertAdjacentElement('beforeend', card);
 
     // добавляем карточку в общий блок 
     //cards.appendChild(card);
-    
+
 });
 
 
-function addProduct(btn){
+function addProduct(btn) {
     //console.log(btn.closest('.card').getAttribute('data-id'));
     //console.log(btn.closest('.card').dataset.id);
     //console.log(btn.dataset.id);
     let id = btn.dataset.id;
-    
+
     // JSON.stringify(products); преобразования в строку в формате JSON
     // JSON.parse(products);    преобразования из строки в обьект или массив
 
     // получаем данные из localStorage по ключу key_products
     let storage = localStorage.getItem('key_products');
-    
+
     // если есть ключ key_products в localStorage
-    if (storage){
+    if (storage) {
         // преобразовываем строку в обьект и перезаписываем переменную storage
         storage = JSON.parse(storage);
     }
@@ -378,14 +378,14 @@ function addProduct(btn){
         // если нет ключа key_products в localStorage, то создаем пустой обьект
         storage = {};
     }
-    
+
     // если товара нет в корзине, то добавляем
-    if (!storage[id]){
+    if (!storage[id]) {
         storage[id] = 1;
     } else {
         storage[id] += 1;
     }
 
-    localStorage.setItem( 'key_products', JSON.stringify(storage) );
+    localStorage.setItem('key_products', JSON.stringify(storage));
 
 }

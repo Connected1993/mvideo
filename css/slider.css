@@ -1,40 +1,48 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
+
 .d-flex {
     display: flex;
 }
+
 .slider {
     user-select: none;
     overflow: hidden;
     position: relative;
     margin: 0 auto;
-    max-height: 300px;
+    max-height: 500px;
     max-width: 1000px;
     min-width: 300px;
-    border: 1px solid black; 
+    border: 1px solid black;
     box-shadow: 0 0 6px 0 black;
-    
+
 }
+
 .slider:hover i {
     color: rgb(255, 255, 255);
     background-color: black;
     border-radius: 50%;
     cursor: pointer;
     transform: translateX(0);
-} 
+}
+
 .slider__line {
     transition: transform 500ms;
-    width:100%;
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+    max-height: 500px;
 }
+
 .slider__line img {
     pointer-events: none;
     width: 100%;
 }
+
 .slider__controls {
     width: 100%;
     position: absolute;
@@ -42,24 +50,29 @@
     justify-content: space-between;
     transform: translateY(-50%);
 }
+
 .slider__controls i {
     transition: transform 500ms;
-    font-size: clamp(25px,4dvw,70px);
+    font-size: clamp(25px, 4dvw, 70px);
 }
+
 .slider__controls .fa-circle-arrow-right {
     transform: translateX(calc(100% + 10px));
     margin-right: 10px;
 }
+
 .slider__controls .fa-circle-arrow-left {
     transform: translateX(calc(-100% - 10px));
     margin-left: 10px;
 }
+
 .slider__dotteds {
     bottom: 15px;
     position: absolute;
     width: 100%;
     text-align: center;
 }
+
 .slider__dotted {
     transition: background 1000ms;
     display: inline-block;
@@ -67,8 +80,8 @@
     border: 1px solid black;
     border-radius: 50%;
     cursor: pointer;
-    height: clamp(15px,2.2dvw,30px);
-    width: clamp(15px,2.2dvw,30px);
+    height: clamp(15px, 2.2dvw, 30px);
+    width: clamp(15px, 2.2dvw, 30px);
     margin-right: 5px;
 }
 
@@ -83,7 +96,7 @@
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     border: 1px solid black;
     content: "";
@@ -95,5 +108,3 @@
 .active {
     background-color: rgb(255, 81, 0);
 }
-
-
