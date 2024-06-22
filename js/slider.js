@@ -75,4 +75,7 @@ window.onload = function () {
     DOTTEDS = document.querySelectorAll('.slider__dotted');
 }
 
-
+// импортируем в глобальную область видимости
+window.sliderLeft = sliderLeft;
+window.sliderRight = sliderRight;
+window.showSlide = showSlide;

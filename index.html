@@ -113,19 +113,8 @@
     <script defer src="/js/events.js" type="module"></script>
     <script defer src="/js/slider.js" type="module"></script>
     <script defer src="/js/swap.js" type="module"></script>
-    <script type="module">
-      // импортируем в глобальную область видимости
-      import {
-        counter,
-        sliderLeft,
-        sliderRight,
-        showSlide,
-      } from "./js/slider.js";
-      window.sliderLeft = sliderLeft;
-      window.sliderRight = sliderRight;
-      window.showSlide = showSlide;
-    </script>
-    <script src="/js/products.js"></script>
+    <script defer src="/js/products.js" type="module"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
       //  function getProductId(id) {

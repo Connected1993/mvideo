@@ -77,7 +77,7 @@
   <template id="item">
     <article class="product">
       <header>
-        <a class="remove">
+        <a class="remove" onclick="removeCart(this)">
           <img src="/src/phones/1.jpg" alt="" />
           <h3>удалить товар</h3>
         </a>
@@ -105,7 +105,8 @@
     // при загрузке страницы получаем хранилище
     window.onload = () => {
       let products = getStorageProduct();
-      if (products) {
+      // если products не null и там есть хоть 1 товар тогда отправляем запрос на сервер
+      if (products && Object.keys(products).length > 0 ) {
         let ids = '';
         for (let id in products) {
           ids += `id=${id}&`;
@@ -118,15 +119,24 @@
             sum();
           })
       }
+
+      // отрисовка карточек с товаров
       function renderCart(products) {
         const parent = document.querySelector('main .container');
         products.forEach(product => {
+          // клонируем
           let clone = document.getElementById('item').content.querySelector('article').cloneNode(true);
+          clone.dataset.id = product.id;
+          // заменяем имя товара
           clone.querySelector('.name').textContent = product.name;
-          //clone.querySelector('.qt').textContent = product.;
+          // устанавливаем id товара
+          clone.querySelector('.remove').dataset.id = product.id;
+          // устанааливаем цену
           clone.querySelector('.full-price').textContent = product.price;
           clone.querySelector('.price').textContent = 'Цена по скидке' + getDiscountPrice(product);
+          //  заменяем изображение
           clone.querySelector('.remove img').src = `/src/phones/${product.img}`;
+          // добавляем в родительский блок для отрисовки
           parent.appendChild(clone);
         });
       }
@@ -135,9 +145,28 @@
 
       };
     }
+    
     function getDiscountPrice(product) {
       return Math.ceil(product.price - (product.price / 100) * product.discount);
     };
+
+    function removeCart(target) {
+      // получаем id товара
+      let id = target.dataset.id;
+      // находим элемент с тегом article у которого есть атрибут id
+      // который должен быть равен нашему id из переменной 
+      let elem = document.querySelector(`article[data-id='${id}']`);
+      // удаляем визуально с вертски
+      elem.remove();
+      // получаем данные из хранилища
+      let products = getStorageProduct();
+      // удаляем свойство из обьекта
+      delete(products[id]);
+      // перезаписываем данные о товарах в хранилище и сохраняем
+      setStorageProduct(products);
+
+    }
+
   </script>
 </body>
 
