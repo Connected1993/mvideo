@@ -1,22 +1,10 @@
-// при загрузке страницы получаем хранилище
-window.onload = () => {
-  fetch(APP_URL+'/products?_start=0&_limit=12')
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (products) {
-        // массив с данными
-        renderProducts(products);
-    });
-};
 
 // шаблон карточки
 const template = document.querySelector("#card").content;
 // общий блок для карточек
 const cards = document.querySelector(".cards");
 
-function renderProducts(products) {
-
+export function renderProducts(products) {
   products.forEach((product) => {
     let card = template.querySelector(".card").cloneNode(true);
     // устанавливаем id товара в атрибут data-id для карточки
@@ -35,7 +23,10 @@ function renderProducts(products) {
     // отрисовываем карточку в общий блок
     cards.insertAdjacentElement("beforeend", card);
   });
+
 }
+
+
 function addProduct(btn) {
   //console.log(btn.closest('.card').getAttribute('data-id'));
   //console.log(btn.closest('.card').dataset.id);

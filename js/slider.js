@@ -56,8 +56,10 @@ export function showSlide(number = 0) {
     rollSlider();
     drawDotted();
 }
+
 // при загрузки страницы
-window.onload = function () {
+export const renderDotteds = function () {
+  
     // перебераем все изображения
     // и рисуем в браузере
     IMAGES.forEach(function (value, index) {
@@ -77,5 +79,6 @@ window.onload = function () {
 
 // импортируем в глобальную область видимости
 window.sliderLeft = sliderLeft;
+window.renderDotteds = renderDotteds;
 window.sliderRight = sliderRight;
 window.showSlide = showSlide;

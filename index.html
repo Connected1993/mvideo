@@ -111,18 +111,36 @@
     </footer>
 
     <script src="/js/config.js"></script>
+
     <script defer src="/js/events.js" type="module"></script>
     <script defer src="/js/slider.js" type="module"></script>
     <script defer src="/js/swap.js" type="module"></script>
-    <script defer src="/js/products.js"></script>
+    <script defer src="/js/products.js" type="module"></script>
+    <script defer src="/js/lazyLoadProducts.js" type="module"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-      //  function getProductId(id) {
-      //     if (!id) return null;
-      //     const response =  axios.get(`http://localhost:3000/products/` + id);
-      //     return await response.data.id;
-      // }
+
+    <script type="module">
+      import { renderProducts } from "/js/products.js";
+      import { lazyCounter,observer, lazyLoadProducts } from "/js/lazyLoadProducts.js";
+
+
+      window.onload = () => {
+        renderDotteds();
+
+        // fetch(APP_URL + "/products?_start=0&_limit=12")
+        //   .then(function (response) {
+        //     return response.json();
+        //   })
+        //   .then(function (products) {
+        //     // массив с данными
+        //     renderProducts(products);
+        //     lazyCounter++;
+        //     console.log(lazyCounter);
+        //   });
+
+         observer.observe(document.querySelector(".footer"));
+      };
     </script>
   </body>
 </html>
