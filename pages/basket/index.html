@@ -116,12 +116,12 @@
         })
           .then(function (products) {
             renderCart(products);
-            sum();
           })
       }
-
-      // отрисовка карточек с товаров
-      function renderCart(products) {
+    }
+    
+    // отрисовка карточек с товаров
+    function renderCart(products) {
         const parent = document.querySelector('main .container');
         products.forEach(product => {
           // клонируем
@@ -141,11 +141,6 @@
         });
       }
 
-      function sum() {
-
-      };
-    }
-    
     function getDiscountPrice(product) {
       return Math.ceil(product.price - (product.price / 100) * product.discount);
     };
