@@ -27,20 +27,15 @@
 
   </header>
   <main>
-    <div class="container"></div>
-  </main>
-
-  <body class="site-footer">
-    <div class="container clearfix">
-      <div class="left">
-        <h2 class="subtotal">Количество товаров: <span>1</span>шт</h2>
+    <div class="container">
+      <div class="total_price">
+        <span>Итого: {price} .руб</span>
       </div>
-      <div class="right">
-        <h1 class="total">Общая сумма: <span></span>р</h1>
-        <a class="btn">Оформить</a>
+      <div class="total_products">
+        <span>Кол: {total} .шт</span>
       </div>
     </div>
-  </body>
+  </main>
   <section class="footer">
     <div> <span>О НАС</span>
       <p>Мы оказываем услуги по продаже техники и оказыванийй услуг <br>
@@ -77,7 +72,7 @@
   <template id="item">
     <article class="product">
       <header>
-        <a class="remove" onclick="removeCart(this)">
+        <a class="remove" onclick="removeCart()">
           <img src="/src/phones/1.jpg" alt="" />
           <h3>удалить товар</h3>
         </a>
@@ -90,10 +85,9 @@
         <div style="top: 43px" class="type small"></div>
       </div>
       <footer class="content">
-        <span class="qt-minus">-</span>
+        <span class="qt-minus" onclick="quantityChange(0)">-</span>
         <span class="qt">1</span>
-        <span class="qt-plus">+</span>
-
+        <span class="qt-plus" onclick="quantityChange(1)">+</span>
         <h2 class="full-price">135.000р</h2>
         <h2 class="price">150.000р</h2>
       </footer>
@@ -102,7 +96,10 @@
 
   <script src="/js/config.js"></script>
   <script src="/js/storage.js"></script>
+
   <script>
+    let totalPrice=0;
+    let totalProduct=0;
     // при загрузке страницы получаем хранилище
     window.onload = () => {
       let products = getStorageProduct();
@@ -117,19 +114,52 @@
         })
           .then(function (products) {
             renderCart(products);
+
           })
       }
     }
 
+    function quantityChange(operator){
+
+      let elem  = window.event.target;
+      // получаем id товара
+      let id = elem.closest('article').dataset.id;
+      // получаем обьект из хранилища
+      let storage = getStorageProduct()
+      // изменяем количество товара в обьекте
+      if (operator)
+      storage[id] += 1;
+      else
+      storage[id] -= 1;
+      // получаем текущее количество товара
+      let current = storage[id];
+
+      if (current <= 0) {
+        removeCart(id); 
+      }
+      else
+      {
+        // сохраняем в хранилище
+        setStorageProduct(storage);
+        elem.closest('footer').querySelector('.qt').textContent = current;
+      }
+    }
+
+
     // отрисовка карточек с товаров
     function renderCart(products) {
         const parent = document.querySelector('main .container');
+
         products.forEach(product => {
+          console.warn(product.price)
+          totalPrice += product.price;
           // клонируем
           let clone = document.getElementById('item').content.querySelector('article').cloneNode(true);
           clone.dataset.id = product.id;
           // заменяем имя товара
           clone.querySelector('.name').textContent = product.name;
+          // кол шт
+          clone.querySelector('.qt').textContent = getStorageProduct()[product.id];
           // устанавливаем id товара
           clone.querySelector('.remove').dataset.id = product.id;
           // устанааливаем цену
@@ -138,17 +168,22 @@
           //  заменяем изображение
           clone.querySelector('.remove img').src = `/src/phones/${product.img}`;
           // добавляем в родительский блок для отрисовки
-          parent.appendChild(clone);
+          parent.prepend(clone);
         });
+        // // общая сумма товаров
+        // let price = document.querySelector('.total_price span');
+        // price.textContent = price.textContent.replace('{price}',totalPrice);
+        // // количество товаров в корзине
+        // let total = document.querySelector('.total_products span');
+        // total.textContent = total.textContent.replace('{total}',Object.values(getStorageProduct()).reduce( (a,b) => a + b));
       }
 
     function getDiscountPrice(product) {
       return Math.ceil(product.price - (product.price / 100) * product.discount);
     };
 
-    function removeCart(target) {
-      // получаем id товара
-      let id = target.dataset.id;
+    function removeCart(id) {
+      let target = window.event.target;
       // находим элемент с тегом article у которого есть атрибут id
       // который должен быть равен нашему id из переменной 
       let elem = document.querySelector(`article[data-id='${id}']`);
@@ -158,9 +193,9 @@
       let products = getStorageProduct();
       // удаляем свойство из обьекта
       delete(products[id]);
+      console.log(products);
       // перезаписываем данные о товарах в хранилище и сохраняем
       setStorageProduct(products);
-
     }
 
   </script>

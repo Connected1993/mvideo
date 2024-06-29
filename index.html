@@ -121,12 +121,13 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script type="module">
-      import { renderProducts } from "/js/products.js";
+      import { renderProducts,addProduct} from "/js/products.js";
       import { lazyCounter,observer, lazyLoadProducts } from "/js/lazyLoadProducts.js";
 
 
       window.onload = () => {
         renderDotteds();
+       
 
         // fetch(APP_URL + "/products?_start=0&_limit=12")
         //   .then(function (response) {

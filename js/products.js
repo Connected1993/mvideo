@@ -1,4 +1,3 @@
-
 // шаблон карточки
 const template = document.querySelector("#card").content;
 // общий блок для карточек
@@ -10,7 +9,7 @@ export function renderProducts(products) {
     // устанавливаем id товара в атрибут data-id для карточки
     card.dataset.id = product.id;
     // замена контента
-    card.querySelector(".card__title").textContent = product.productname;
+    card.querySelector(".card__title").textContent = product.name;
     card.querySelector(".card__image").href =
       "/pages/card/index.html?id=" + product.id;
     card.querySelector(".card__title").href =
@@ -26,8 +25,7 @@ export function renderProducts(products) {
 
 }
 
-
-function addProduct(btn) {
+ export function addProduct(btn) {
   //console.log(btn.closest('.card').getAttribute('data-id'));
   //console.log(btn.closest('.card').dataset.id);
   //console.log(btn.dataset.id);
@@ -57,3 +55,6 @@ function addProduct(btn) {
 
   localStorage.setItem("key_products", JSON.stringify(storage));
 }
+
+// импрортировали функция addProduct в глобальную область видимости
+window.addProduct = addProduct;
