@@ -28,11 +28,14 @@
   </header>
   <main>
     <div class="container">
-      <div class="total_price">
-        <span>Итого: {price} .руб</span>
-      </div>
-      <div class="total_products">
-        <span>Кол: {total} .шт</span>
+
+      <div class="total d-none">
+        <div class="total_price">
+          <span></span>
+        </div>
+        <div class="total_products">
+          <span></span>
+        </div>
       </div>
     </div>
   </main>
@@ -100,6 +103,8 @@
   <script>
     let totalPrice=0;
     let totalProduct=0;
+    let data = [];
+
     // при загрузке страницы получаем хранилище
     window.onload = () => {
       let products = getStorageProduct();
@@ -113,8 +118,8 @@
           return response.json()
         })
           .then(function (products) {
+            data = [...products];
             renderCart(products);
-
           })
       }
     }
@@ -143,6 +148,9 @@
         setStorageProduct(storage);
         elem.closest('footer').querySelector('.qt').textContent = current;
       }
+      
+      // перерисовываем сумму
+      renderSum();
     }
 
 
@@ -151,8 +159,7 @@
         const parent = document.querySelector('main .container');
 
         products.forEach(product => {
-          console.warn(product.price)
-          totalPrice += product.price;
+ 
           // клонируем
           let clone = document.getElementById('item').content.querySelector('article').cloneNode(true);
           clone.dataset.id = product.id;
@@ -164,19 +171,38 @@
           clone.querySelector('.qt').textContent = getStorageProduct()[product.id];
           // устанааливаем цену
           clone.querySelector('.full-price').textContent = product.price;
-          clone.querySelector('.price').textContent = 'Цена по скидке' + getDiscountPrice(product);
+          clone.querySelector('.price').textContent = 'Цена по скидке ' + getDiscountPrice(product);
           //  заменяем изображение
           clone.querySelector('.remove img').src = `/src/phones/${product.img}`;
           // добавляем в родительский блок для отрисовки
           parent.prepend(clone);
         });
-        // // общая сумма товаров
-        // let price = document.querySelector('.total_price span');
-        // price.textContent = price.textContent.replace('{price}',totalPrice);
-        // // количество товаров в корзине
-        // let total = document.querySelector('.total_products span');
-        // total.textContent = total.textContent.replace('{total}',Object.values(getStorageProduct()).reduce( (a,b) => a + b));
-      }
+        renderSum();
+    }
+
+
+    function renderSum()
+    {
+
+        if (data.length === 0) {
+          document.querySelector('.total').classList.add('d-none');
+          return false;
+        }
+
+        totalPrice = 0;
+        totalCount = 0;
+        data.forEach(product=>{
+            // кол текущего товара в хранилище , достали по id getStorageProduct()[product.id]
+            // цена по скидке getDiscountPrice(product)
+            totalPrice += getStorageProduct()[product.id] * getDiscountPrice(product);
+        });
+
+        document.querySelector('.total').classList.remove('d-none');
+        // общая сумма товаров
+        document.querySelector('.total_price span').textContent = 'Итого: '+totalPrice+' руб';
+        // количество товаров в корзине
+        document.querySelector('.total_products span').textContent = 'Количество: '+Object.values(getStorageProduct()).reduce( (a,b) => a + b)+' шт';
+    }
 
     function getDiscountPrice(product) {
       return Math.ceil(product.price - (product.price / 100) * product.discount);
@@ -193,9 +219,11 @@
       let products = getStorageProduct();
       // удаляем свойство из обьекта
       delete(products[id]);
-      console.log(products);
       // перезаписываем данные о товарах в хранилище и сохраняем
       setStorageProduct(products);
+
+      // удаляем товар из копии данных
+      data = data.filter(product => product.id != id );
     }
 
   </script>
