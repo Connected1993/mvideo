@@ -5,7 +5,6 @@ const cards = document.querySelector(".cards");
 
 export function renderProducts(products) {
 
-
   products.forEach((product) => {
     let card = template.querySelector(".card").cloneNode(true);
 
@@ -39,8 +38,7 @@ export function renderProducts(products) {
  export function addProduct(btn) {
   let id = btn.dataset.id;
 
-  // получаем данные из localStorage по ключу key_products
-  let storage = localStorage.getItem("key_products");
+  let storage = getStorageProduct();
 
   // если есть ключ key_products в localStorage
   if (storage) {
@@ -58,7 +56,7 @@ export function renderProducts(products) {
     storage[id] += 1;
   }
 
-  localStorage.setItem("key_products", JSON.stringify(storage));
+  setStorageProduct(storage);
 }
 
 // импрортировали функция addProduct в глобальную область видимости
