@@ -4,8 +4,19 @@ const template = document.querySelector("#card").content;
 const cards = document.querySelector(".cards");
 
 export function renderProducts(products) {
+
+
   products.forEach((product) => {
     let card = template.querySelector(".card").cloneNode(true);
+
+    if ( Object.keys( getStorageProduct() ).includes(`${product.id}`))
+    {
+        card.querySelector('button').classList.add('card_added','card_active');
+    } 
+    else
+    {
+        card.querySelector('button').classList.add('card_remove');    
+    }
     // устанавливаем id товара в атрибут data-id для карточки
     card.dataset.id = product.id;
     // замена контента
@@ -26,13 +37,7 @@ export function renderProducts(products) {
 }
 
  export function addProduct(btn) {
-  //console.log(btn.closest('.card').getAttribute('data-id'));
-  //console.log(btn.closest('.card').dataset.id);
-  //console.log(btn.dataset.id);
   let id = btn.dataset.id;
-
-  // JSON.stringify(products); преобразования в строку в формате JSON
-  // JSON.parse(products);    преобразования из строки в обьект или массив
 
   // получаем данные из localStorage по ключу key_products
   let storage = localStorage.getItem("key_products");

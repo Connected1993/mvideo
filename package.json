@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "json-server": "^0.17.4"
+    "json-server": "^0.17.4",
+    "simple-notify": "^1.0.4"
   },
   "scripts": {
     "db": "json-server --watch db.json --port 3001"

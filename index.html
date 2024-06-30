@@ -11,6 +11,8 @@
     />
     <link rel="stylesheet" href="/css/slider.css" />
     <link rel="stylesheet" href="/css/style.css" />
+     <!-- Notify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.css" />
   </head>
 
   <body>
@@ -67,9 +69,7 @@
           <!-- Ссылка-название товара -->
           <a href="/pages/card/index.html" class="card__title"> IPhone1 </a>
           <!-- Кнопка добавить в корзину -->
-          <button class="card__add" onclick="addProduct(this)">
-            В корзину
-          </button>
+          <button class="card__add" onclick="addProduct(this)"></button>
         </div>
       </div>
     </template>
@@ -115,6 +115,9 @@
     <script defer src="/js/events.js" type="module"></script>
     <script defer src="/js/slider.js" type="module"></script>
     <script defer src="/js/swap.js" type="module"></script>
+    <!-- хранилище   -->
+    <script defer src="/js/storage.js"></script>
+
     <script defer src="/js/products.js" type="module"></script>
     <script defer src="/js/lazyLoadProducts.js" type="module"></script>
 
@@ -125,23 +128,45 @@
       import { lazyCounter,observer, lazyLoadProducts } from "/js/lazyLoadProducts.js";
 
 
+
       window.onload = () => {
-        renderDotteds();
-       
-
-        // fetch(APP_URL + "/products?_start=0&_limit=12")
-        //   .then(function (response) {
-        //     return response.json();
-        //   })
-        //   .then(function (products) {
-        //     // массив с данными
-        //     renderProducts(products);
-        //     lazyCounter++;
-        //     console.log(lazyCounter);
-        //   });
-
+         renderDotteds();
          observer.observe(document.querySelector(".footer"));
       };
+
+      document.querySelector('.cards').addEventListener('click',Event=>{
+        if (event.target.classList.contains('card__add')){
+          let btn = event.target;
+
+            btn.classList.remove('card_remove');
+            btn.classList.add('card_active','card_added');
+
+          let id = Event.target.dataset.id;
+         
+              new Notify({
+              status: 'success',
+              title: document.querySelector(`.card[data-id='${id}'] .card__title`).textContent,
+              text: 'товар добавлен в крозину',
+              effect: 'fade',
+              speed: 1000,
+              customClass: null,
+              customIcon: null,
+              showIcon: true,
+              showCloseButton: true,
+              //autoclose: true,
+              autotimeout: 1000,
+              gap: 20,
+              distance: 20,
+              type: 'outline',
+              position: 'right top'
+            })
+        }
+      })
+
     </script>
+
+  <!-- Notify -->
+  <script src="https://cdn.jsdelivr.net/npm/simple-notify@1.0.4/dist/simple-notify.min.js"></script>
+
   </body>
 </html>
